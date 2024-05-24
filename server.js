@@ -10,11 +10,10 @@ dotenv.config();
 // express.json is reading all body value
 app.use(express.json())
 const dbConnectUrl=process.env.MONGO_URL
+console.log(dbConnectUrl)
 // console.log(process.env.DB_Connect_Url);
 // Connecting my app with mongodb using mongoose
 mongoose.connect(`${dbConnectUrl}`)
-
-
     .then(() => {
         console.log("Connection with Database established successfull")
     })
